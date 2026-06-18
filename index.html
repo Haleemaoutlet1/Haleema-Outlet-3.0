@@ -1090,7 +1090,6 @@ function saveBrands(){
 }
 function addBrand(){
   const brands=ld('brands');
-  if(brands.length>=10){alert('Maximum 10 brands allowed.');return;}
   brands.push({name:'New Brand',price:'Tagline here',label:'',img:'',badge:''});
   sv('brands',brands);
   renderBrandsAdmin();
@@ -1199,7 +1198,6 @@ function saveProducts(){
 }
 function addProduct(){
   const prods=ld('products');
-  if(prods.length>=20){alert('Maximum 20 products allowed.');return;}
   const brands=ld('brands');
   prods.push({name:'New Product',brand:brands[0]?brands[0].name:'',price:'Rs. 0',img:'',stock:0});
   sv('products',prods);
